@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #274c5b;
+  --color-brand-green: #7eb693;
+  --color-brand-yellow: #efd372;
+  --color-brand-grey: #d4d4d4;
+  --color-brand-white: #f9f8f8;
+
+  --font-rob: "Roboto", sans-serif;
+  --font-yellow: "Yellowtail", cursive;
+}
