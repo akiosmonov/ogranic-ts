@@ -2,6 +2,7 @@ import { useProductStore } from "@/store/useProductStore";
 import { Link, NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import { IoCartSharp } from "react-icons/io5";
+import Shop from "../sections/shop/Shop";
 
 const Header = () => {
   const navLinks = [
