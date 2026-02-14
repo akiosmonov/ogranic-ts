@@ -1,71 +1,8 @@
 import React from "react";
 import Newletter from "../Newletter";
-const products = [
-  {
-    id: 1,
-    cat: "Vegetable",
-    name: "Calabrese Broccoli",
-    oldPrice: "20.00",
-    price: "13.00",
-    img: "/Photo.svg",
-  },
-  {
-    id: 2,
-    cat: "Fresh",
-    name: "Fresh Banana Fruits",
-    oldPrice: "20.00",
-    price: "14.00",
-    img: "/Photo (1).svg",
-  },
-  {
-    id: 3,
-    cat: "Millets",
-    name: "White Hazelnut",
-    oldPrice: "20.00",
-    price: "12.00",
-    img: "/Photo (2).svg",
-  },
-  {
-    id: 4,
-    cat: "Vegetable",
-    name: "Vegan Red Tomato",
-    oldPrice: "20.00",
-    price: "17.00",
-    img: "/Photo (3).svg",
-  },
-  {
-    id: 5,
-    cat: "Health",
-    name: "Mung Bean",
-    oldPrice: "20.00",
-    price: "11.00",
-    img: "/Photo (1).svg",
-  },
-  {
-    id: 6,
-    cat: "Nuts",
-    name: "Brown Hazelnut",
-    oldPrice: "20.00",
-    price: "12.00",
-    img: "/Photo (2).svg",
-  },
-  {
-    id: 7,
-    cat: "Fresh",
-    name: "Eggs",
-    oldPrice: "20.00",
-    price: "17.00",
-    img: "/Photo (3).svg",
-  },
-  {
-    id: 8,
-    cat: "Fresh",
-    name: "Zelery",
-    oldPrice: "20.00",
-    price: "11.00",
-    img: "/Photo.svg",
-  },
-];
+import { Link } from "react-router-dom";
+import { products } from "../../../../data/product";
+
 
 const Shop = () => {
   return (
@@ -94,17 +31,19 @@ const Shop = () => {
                 <span className=" absolute top-6 left-6 bg-brand-dark text-white px-3 py-1 rounded-md text-sm font-semibold">
                   {item.cat}
                 </span>
-                <div className="h-64 flex items-center justify-center mb-4">
-                  <img
-                    src={item.img}
-                    alt=""
-                    className="max-h-full object-contain group-hover:scale-105 transition-transform"
-                  />
-                </div>
+                <Link to={`/shopSingle/${item.id}`}>
+                  <div className="h-64 flex items-center justify-center mb-4">
+                    <img
+                      src={item.img}
+                      alt=""
+                      className="max-h-full object-contain  transition-transform"
+                    />
+                  </div>
 
-                <h3 className="text-brand-dark text-xl font-bold mb-3">
-                  {item.name}
-                </h3>
+                  <h3 className="text-brand-dark text-xl font-bold mb-3">
+                    {item.name}
+                  </h3>
+                </Link>
 
                 <div className="flex justify-between items-center border-t border-[#E0E0E0] pt-3">
                   <div className="flex gap-2 items-center">

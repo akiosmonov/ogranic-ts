@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import { MainLayout } from "./components/common/layouts/MainLayouts";
 import About from "./components/common/sections/About/About";
 import Shop from "./components/common/sections/shop/Shop";
+import ShopSingle from "./components/common/sections/ShopSingle/ShopSingle";
 
 function App() {
   let routes = [
@@ -20,15 +21,20 @@ function App() {
     {
       name: "shop",
       path: "/shop",
-      element: <Shop />
-    }
+      element: <Shop />,
+    },
+    {
+      name: "shopSingle",
+      path: "/shopSingle/:ProductId",
+      element: <ShopSingle />,
+    },
   ];
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
+        <Route path="" element={<MainLayout />}>
           {routes.map((item) => (
-            <Route key={item.name} {...item} />
+            <Route key={item.name} path={item.path} element={item.element} />
           ))}
         </Route>
       </Routes>
