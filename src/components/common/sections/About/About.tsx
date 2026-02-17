@@ -1,23 +1,13 @@
 import React from "react";
 import Newletter from "../Newletter";
+import PageBanner from "../PageBanner";
 
 const About = () => {
   return (
     <>
       <section id="about" className=" bg-white">
-        <div
-          className="h-100 flex items-center justify-center"
-          style={{
-            backgroundImage: `url("/Image (1).svg")`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <h1 className=" flex items-center justify-center text-brand-dark text-4xl font-extrabold">
-            About Us
-          </h1>
-        </div>
+        <PageBanner title="About Us" bgImage="/Image (1).svg" />
+
         <div className="container mx-auto px-4 flex-col lg:flex-row items-center gap-12">
           <div className=" lg:flex-row flex items-center gap-16">
             <div className=" lg:w-1/2">

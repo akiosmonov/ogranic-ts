@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { products } from "../../../../data/product";
 import { useParams } from "react-router-dom";
+import PageBanner from "../PageBanner";
 
 const ShopSingle = () => {
   const [count, setCount] = useState(1);
@@ -12,19 +13,8 @@ const ShopSingle = () => {
 
   return (
     <section className="bg-white">
-      <div
-        className="h-100 flex items-center justify-center"
-        style={{
-          backgroundImage: `url("/Banner Image.svg")`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <h5 className="text-brand-dark text-4xl font-bold text-center">
-          Shop Single
-        </h5>
-      </div>
+      <PageBanner title="Shop Single" bgImage="/Banner Image.svg" />
+
       <div className="container mx-auto mt-40 px-4">
         {filteredProduct.map((item) => (
           <div

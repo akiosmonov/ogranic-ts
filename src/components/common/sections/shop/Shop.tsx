@@ -2,25 +2,14 @@ import React from "react";
 import Newletter from "../Newletter";
 import { Link } from "react-router-dom";
 import { products } from "../../../../data/product";
-
+import PageBanner from "../PageBanner";
 
 const Shop = () => {
   return (
     <>
       <section className="bg-white">
-        <div
-          className="h-100 flex items-center justify-center"
-          style={{
-            backgroundImage: `url("/images.svg")`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <h1 className=" text-center text-brand-dark text-5xl font-extrabold">
-            Shop
-          </h1>
-        </div>
+        <PageBanner title="Shop" bgImage="/images.svg" />
+
         <div className="container mx-auto mt-40 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((item, idx) => (
