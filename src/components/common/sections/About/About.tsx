@@ -1,8 +1,11 @@
 import React from "react";
 import Newletter from "../Newletter";
 import PageBanner from "../PageBanner";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../ui";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section id="about" className=" bg-white">
@@ -48,12 +51,12 @@ const About = () => {
                 </div>
               </div>
 
-              <button className=" bg-brand-dark text-white px-10 py-6 rounded-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all">
+              <Button
+                onClick={() => navigate("/shop")}
+                className=" bg-brand-dark text-white px-10 py-6 rounded-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all"
+              >
                 Shop Now
-                <div className="bg-[#335B6B] rounded-full w-10 h-10 flex items-center justify-center text-[10px]">
-                  ➔
-                </div>
-              </button>
+              </Button>
             </div>
           </div>
         </div>

@@ -6,25 +6,25 @@ const servicesData = [
   {
     id: 1,
     title: "Dairy Products",
-    img: "/Photo (4).svg",
+    img: "/IconS.svg",
     desc: "Fresh and organic milk right from the farm.",
   },
   {
     id: 2,
     title: "Store Services",
-    img: "/Photo (4).svg",
+    img: "/Icon (7).svg",
     desc: "Wide range of organic products in our local stores.",
   },
   {
     id: 3,
     title: "Online Delivery",
-    img: "/Photo (4).svg",
+    img: "/Icon (8).svg",
     desc: "Fast and reliable delivery to your doorstep.",
   },
   {
     id: 4,
     title: "Agricultural Services",
-    img: "/Photo (4).svg",
+    img: "/Icon (9).svg",
     desc: "Professional help for your own organic garden.",
   },
 ];
@@ -60,7 +60,26 @@ const Service = () => {
         </div>
       </section>
 
-      <Newletter />
+      <section
+        className="bg-cover bg-center py-28"
+        style={{ backgroundImage: `url("/Background Image.svg")` }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center text-center max-w-200 mx-auto">
+            <span className="text-brand-green font-yellow text-4xl mb-2">
+              Organic Only
+            </span>
+            <h2 className="text-brand-dark text-5xl font-black font-rob mb-6">
+              Everyday Fresh & Clean
+            </h2>
+            <p className="text-[#525C60] font-semibold text-lg mb-8 leading-relaxed">
+              Simply dummy text of the printing and typesetting industry. Lorem
+              had ceased to been the industry's standard dummy text ever since
+              the 1500s.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
