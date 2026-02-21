@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Newletter from "../Newletter";
 import { Link } from "react-router-dom";
-import { products } from "../../../../data/product";
 import PageBanner from "../PageBanner";
+import { useProducts } from "@/context/ProductContext";
 
 const Shop = () => {
+  const { products, loading } = useProducts();
+
+  if (loading)
+    return (
+      <center>
+        <div className="flex items-center justify-center">
+          <h1 className="text-brand-dark text-4xl font-black">Загрузка...</h1>
+        </div>
+      </center>
+    );
+
   return (
     <>
       <section className="bg-white">
