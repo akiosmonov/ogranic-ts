@@ -21,18 +21,19 @@ function App() {
     },
     {
       name: "shop",
-      path: "/shop",
+      path: "shop",
       element: <Shop />,
     },
     {
       name: "shopSingle",
-      path: "/shopSingle/:ProductId",
+      path: "shopSingle/:productId",
       element: <ShopSingle />,
     },
-    {name: "serrvice",
-      path: "/service",
-      element: <Service />
-    }
+    {
+      name: "serrvice",
+      path: "service",
+      element: <Service />,
+    },
   ];
   return (
     <BrowserRouter>

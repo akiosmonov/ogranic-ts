@@ -6,11 +6,13 @@ import { useProducts } from "@/context/ProductContext";
 const ShopSingle = () => {
   const { products, loading } = useProducts();
   const [count, setCount] = useState(1);
-  const { ProductId } = useParams();
+  const { productId } = useParams();
 
-  const product = products.find((item) => item.id === ProductId);
+  const product = products.find(
+    (item) => String(item.id) === String(productId),
+  );
 
-console.log(product);
+  console.log(product);
 
   if (loading)
     return (
