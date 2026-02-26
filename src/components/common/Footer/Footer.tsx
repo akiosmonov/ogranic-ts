@@ -3,6 +3,7 @@ import s from "./Footer.module.scss";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  
   return (
     <footer className="bg-white pt-24 pb-12">
       <div className="container mx-auto px-4">
@@ -68,7 +69,7 @@ const Footer = () => {
                 Style Guide
               </Link>
               <Link
-                to={"/"}
+                to={"/Error"}
                 className="hover:text-brand-green font-light text-lg"
               >
                 404 Not Found
