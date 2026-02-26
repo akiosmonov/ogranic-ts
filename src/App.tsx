@@ -6,6 +6,7 @@ import Shop from "./components/common/sections/shop/Shop";
 import ShopSingle from "./components/common/sections/ShopSingle/ShopSingle";
 import Service from "./components/common/sections/Service/Service";
 import Error from "./components/common/pages/Error/Error";
+import Licenses from "./components/common/pages/Licenses/Licenses";
 
 function App() {
   let routes = [
@@ -40,6 +41,11 @@ function App() {
       path: "Error",
       element: <Error />,
     },
+    {
+      name: "Licenses",
+      path: 'Licenses',
+      element: <Licenses />
+    }
   ];
   return (
     <BrowserRouter>

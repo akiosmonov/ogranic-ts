@@ -81,7 +81,7 @@ const Footer = () => {
                 Password Protection
               </Link>
               <Link
-                to={"/"}
+                to={"/Licenses"}
                 className="hover:text-brand-green font-light text-lg"
               >
                 Licences
