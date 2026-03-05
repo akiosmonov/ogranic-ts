@@ -8,6 +8,7 @@ import Service from "./components/common/sections/Service/Service";
 import Error from "./components/common/pages/Error/Error";
 import Licenses from "./components/common/pages/Licenses/Licenses";
 import StyleGuide from "./components/common/pages/StyleGuide/StyleGuide";
+import PasswordProtect from "./components/common/pages/PasswordProtect/PasswordProtect";
 
 function App() {
   let routes = [
@@ -51,6 +52,11 @@ function App() {
       name: "StyleGuide",
       path: "StyleGuide",
       element: <StyleGuide />
+    },
+    {
+      name: 'PasswordProtect',
+      path: 'PasswordProtect',
+      element: <PasswordProtect />
     }
   ];
   return (

@@ -75,7 +75,7 @@ const Footer = () => {
                 404 Not Found
               </Link>
               <Link
-                to={"/"}
+                to={"/PasswordProtect"}
                 className="hover:text-brand-green font-light text-lg"
               >
                 Password Protection
