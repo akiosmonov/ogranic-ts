@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
 import { MainLayout } from "./components/common/layouts/MainLayouts";
 import About from "./components/common/sections/About/About";
 import Shop from "./components/common/sections/shop/Shop";
@@ -9,14 +8,16 @@ import Error from "./components/common/pages/Error/Error";
 import Licenses from "./components/common/pages/Licenses/Licenses";
 import StyleGuide from "./components/common/pages/StyleGuide/StyleGuide";
 import PasswordProtect from "./components/common/pages/PasswordProtect/PasswordProtect";
+import Hero from "./components/common/sections/Hero/Hero";
+import Changelog from "./components/common/pages/Changelog/Changelog";
 
 function App() {
   let routes = [
     {
-      name: "home",
+      name: "hero",
       path: "",
       index: true,
-      element: <Home />,
+      element: <Hero />,
     },
     {
       name: "about",
@@ -57,6 +58,11 @@ function App() {
       name: 'PasswordProtect',
       path: 'PasswordProtect',
       element: <PasswordProtect />
+    },
+    {
+      name: "Changelog",
+      path: 'Changelog',
+      element: <Changelog />
     }
   ];
   return (

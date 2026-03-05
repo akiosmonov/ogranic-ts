@@ -87,7 +87,7 @@ const Footer = () => {
                 Licences
               </Link>
               <Link
-                to={"/"}
+                to={"/Changelog"}
                 className="hover:text-brand-green font-light text-lg"
               >
                 Changelog
