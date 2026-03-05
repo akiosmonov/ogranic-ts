@@ -63,7 +63,7 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col gap-4 text-[#525C60]">
               <Link
-                to={"/"}
+                to={"/StyleGuide"}
                 className="hover:text-brand-green font-light text-lg"
               >
                 Style Guide

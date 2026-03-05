@@ -7,6 +7,7 @@ import ShopSingle from "./components/common/sections/ShopSingle/ShopSingle";
 import Service from "./components/common/sections/Service/Service";
 import Error from "./components/common/pages/Error/Error";
 import Licenses from "./components/common/pages/Licenses/Licenses";
+import StyleGuide from "./components/common/pages/StyleGuide/StyleGuide";
 
 function App() {
   let routes = [
@@ -45,6 +46,11 @@ function App() {
       name: "Licenses",
       path: 'Licenses',
       element: <Licenses />
+    },
+    {
+      name: "StyleGuide",
+      path: "StyleGuide",
+      element: <StyleGuide />
     }
   ];
   return (
