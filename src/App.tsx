@@ -10,6 +10,7 @@ import StyleGuide from "./components/common/pages/StyleGuide/StyleGuide";
 import PasswordProtect from "./components/common/pages/PasswordProtect/PasswordProtect";
 import Hero from "./components/common/sections/Hero/Hero";
 import Changelog from "./components/common/pages/Changelog/Changelog";
+import Cart from "./components/common/pages/Cart/Cart";
 
 function App() {
   let routes = [
@@ -63,6 +64,11 @@ function App() {
       name: "Changelog",
       path: 'Changelog',
       element: <Changelog />
+    },
+    {
+      name: "Cart",
+      path: "Cart",
+      element: <Cart />
     }
   ];
   return (

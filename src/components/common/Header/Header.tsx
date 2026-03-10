@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <Link
             className=" flex items-center gap-2 border border-[#E0E0E0] rounded-full p-1 pr-5 hover:border-brand-green transition-all "
-            to={"/"}
+            to={"/cart"}
           >
             <div className="bg-brand-dark p-2.5 rounded-full text-white ">
               <IoCartSharp size={26} />
