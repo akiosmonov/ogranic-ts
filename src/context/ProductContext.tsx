@@ -9,7 +9,7 @@ import React, {
 import axios from "axios";
 
 export interface Product {
-  id: string;
+  id: number;
   cat: string;
   name: string;
   price: string;

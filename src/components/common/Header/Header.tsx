@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import { IoCartSharp } from "react-icons/io5";
 import Shop from "../sections/shop/Shop";
+import { UseCart } from "@/context/CartContext";
 
 const Header = () => {
   const navLinks = [
@@ -10,7 +11,8 @@ const Header = () => {
     { name: "About", path: "/about" },
     { name: "Shop", path: "/shop" },
   ];
-  const products = useProductStore((state) => state.products);
+  // const products = useProductStore((state) => state.products);
+   const {cartItems} = UseCart()
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm py-6">
@@ -45,7 +47,7 @@ const Header = () => {
               <IoCartSharp size={26} />
             </div>
             <span className="font-bold text-brand-dark">
-              Cart ({products.length}){" "}
+              Cart ({cartItems.length}){" "}
             </span>
           </Link>
         </div>

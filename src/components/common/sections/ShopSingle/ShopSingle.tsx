@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import PageBanner from "../PageBanner";
 import { useProducts } from "@/context/ProductContext";
+import { UseCart } from "@/context/CartContext";
 
 const ShopSingle = () => {
   const { products, loading } = useProducts();
   const [count, setCount] = useState(1);
   const { productId } = useParams();
+  const { addToCart } = UseCart();
 
   const product = products.find(
     (item) => String(item.id) === String(productId),
@@ -66,10 +68,13 @@ const ShopSingle = () => {
             </p>
             <div className="flex items-center gap-5 ">
               <h4 className="text-brand-dark font-bold">Quantity :</h4>
-              <h5 className=" text-xl text-brand-dark rounded-2xl border-2 border-brand-dark py-7 px-10">
+              <button className=" text-xl text-brand-dark rounded-2xl border-2 border-brand-dark py-7 px-10">
                 {count}
-              </h5>
-              <button className=" bg-brand-dark hover:scale-110 will-change-transform  text-white px-10 py-3.5 rounded-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all">
+              </button>
+              <button
+                onClick={() => addToCart(product, count)}
+                className=" bg-brand-dark hover:scale-110 will-change-transform  text-white px-10 py-3.5 rounded-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all"
+              >
                 Add To Cart
                 <div className="bg-[#335B6B] hover:scale-105 cursor-pointer rounded-full w-15 h-15 flex items-center justify-center text-[10px]">
                   ➔
