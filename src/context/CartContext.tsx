@@ -1,5 +1,11 @@
-import { ReactNode, useContext, useState, createContext } from "react";
-import { Product } from "./ProductContext"; 
+import {
+  ReactNode,
+  useContext,
+  useState,
+  createContext,
+  useEffect,
+} from "react";
+import { Product } from "./ProductContext";
 
 export interface CartItem extends Product {
   qty: number;
@@ -8,13 +14,21 @@ export interface CartItem extends Product {
 interface CartContextType {
   cartItems: CartItem[];
   addToCart: (product: Product, quantity: number) => void;
-  removeFromCart: (id: number) => void; 
+  removeFromCart: (id: number) => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+
+  }, [cartItems]);
 
   const addToCart = (product: Product, quantity: number) => {
     setCartItems((prevItems) => {
@@ -22,10 +36,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
       if (existingItem) {
         return prevItems.map((item) =>
-          item.id === product.id ? { ...item, qty: item.qty + quantity } : item
+          item.id === product.id ? { ...item, qty: item.qty + quantity } : item,
         );
       }
-      
+
       return [...prevItems, { ...product, qty: quantity } as CartItem];
     });
   };
