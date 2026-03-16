@@ -1,73 +1,26 @@
-# React + TypeScript + Vite
+# 🌿 Organick — E-commerce SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современный продуктовый интернет-магазин, построенный на React и TypeScript. Проект реализован в рамках **AI-driven workflow (Vibe Coding)**, что позволило сфокусироваться на сложной логике и UX, делегируя рутинное написание кода нейросетевым инструментам.
 
-Currently, two official plugins are available:
+### 🚀 Технологический стек:
+* **Frontend:** React 18 + Vite
+* **Language:** TypeScript (полная типизация данных)
+* **State Management:** **Zustand** (легкое и быстрое управление состоянием корзины и товаров)
+* **Styling:** Tailwind CSS + SCSS Modules (для сложных визуальных эффектов)
+* **API:** Axios + REST API (интеграция с базой товаров)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+### ⚙️ Ключевой функционал:
+1.  **Масштабируемая корзина:** управление товарами через Zustand с синхронизацией в `LocalStorage`.
+2.  **Динамическая фильтрация:** быстрый поиск и сортировка продуктов без лишних ререндеров.
+3.  **Адаптивная верстка:** интерфейс полностью оптимизирован под мобильные устройства.
+4.  **Чистая архитектура:** разделение логики (хуки/сторы) и представления (компоненты).
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### 🛠 Как запустить:
+1. Клонировать репозиторий: `git clone https://github.com/akiosmonov/ogranic-ts`
+2. Установить зависимости: `npm install`
+3. Запустить проект: `npm run dev`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*Developed with focus on speed and quality. Feel the vibe!* ⚡
+"Написанно с AI для обучения TypeScript и Tailwild (Zustand)"
