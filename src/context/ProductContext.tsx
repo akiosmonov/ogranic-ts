@@ -33,7 +33,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const url = "https://69986569d66520f95f1776c2.mockapi.io/organickShop";
+  const url = "https://69bba5a60915748735b9c879.mockapi.io/shop/shop";
 
   useEffect(() => {
     const getData = async () => {

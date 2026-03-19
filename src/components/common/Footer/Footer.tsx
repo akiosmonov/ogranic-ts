@@ -42,16 +42,16 @@ const Footer = () => {
               Lorem Ipsum simply dummy text of the printing{" "}
             </p>
             <div className="flex gap-4">
-              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green hover:text-white cursor-pointer">
-                <img src="/insta.svg" alt="" />
+              <div className="bg-[#EFF6F1] p-4 rounded-full ">
+                <img src="/insta.svg" className=" hover:bg-brand-green cursor-pointer" alt="" />
               </div>
-              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green hover:text-white cursor-pointer">
+              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green cursor-pointer">
                 <img src="/facebook.svg" alt="" />
               </div>
-              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green hover:text-white cursor-pointer">
+              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green cursor-pointer">
                 <img src="/twitter.svg" alt="" />
               </div>
-              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green hover:text-white cursor-pointer">
+              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green cursor-pointer">
                 <img src="/xd.svg" alt="" />
               </div>
             </div>

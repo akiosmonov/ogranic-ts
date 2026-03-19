@@ -11,8 +11,8 @@ const Header = () => {
     { name: "About", path: "/about" },
     { name: "Shop", path: "/shop" },
   ];
-  // const products = useProductStore((state) => state.products);
-   const {cartItems} = UseCart()
+
+  const {cartItems} = UseCart()
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm py-6">
