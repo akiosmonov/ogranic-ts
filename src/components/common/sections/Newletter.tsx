@@ -1,4 +1,5 @@
 import React from "react";
+import {Button} from '../ui/Button'
 
 const Newletter = () => {
   return (
@@ -12,7 +13,7 @@ const Newletter = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex py-20 items-center justify-around">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 py-20 p-20 items-center ">
           <div className="lg:w-1/2">
             <h2 className="text-white text-5xl font-black  font-rob leading-tight">
               Subscribe to <br /> our Newsletter
@@ -24,9 +25,9 @@ const Newletter = () => {
               placeholder="Yout Email Address"
               className="w-full sm:w-100 px-8 py-6 rounded-2xl bg-white italic outline-none text-brand-dark"
             />
-            <button className="w-full sm:w-auto bg-brand-dark text-white px-12 pt-6 pb-6 rounded-2xl font-bold hover:opacity-90 transition-all">
+            <Button className="w-full sm:w-auto bg-brand-dark text-white px-12 pt-6 pb-6 rounded-2xl font-bold hover:opacity-90 transition-all">
               Subscibe
-            </button>
+            </Button>
           </div>
         </div>
       </div>

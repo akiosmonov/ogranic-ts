@@ -1,25 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import PageBanner from "../../sections/PageBanner";
 import { Button } from "../../ui";
 import { UseCart } from "@/context/CartContext";
 import { Link } from "react-router-dom";
-
-const initialCart = [
-  {
-    id: "1",
-    name: "Calabrese Broccoli",
-    price: 13,
-    qty: 2,
-    img: "/Image (16).svg",
-  },
-  {
-    id: "2",
-    name: "Fresh Banana Fruits",
-    price: 14,
-    qty: 1,
-    img: "/Image.svg",
-  },
-];
 
 const Cart = () => {
   const { cartItems, removeFromCart } = UseCart();

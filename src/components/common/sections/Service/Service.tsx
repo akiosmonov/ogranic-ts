@@ -1,6 +1,5 @@
 import React from "react";
 import PageBanner from "../PageBanner";
-import Newletter from "../Newletter";
 
 const servicesData = [
   {

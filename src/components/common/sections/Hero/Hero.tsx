@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Hero.module.scss";
 import { Button } from "../../ui";
 import { useNavigate } from "react-router-dom";
+import Newletter from "../Newletter";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -133,6 +134,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      <Newletter />
     </>
   );
 };

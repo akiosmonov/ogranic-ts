@@ -6,7 +6,7 @@ import { UseCart } from "@/context/CartContext";
 
 const ShopSingle = () => {
   const { products, loading } = useProducts();
-  const [count, setCount] = useState(1);
+  const [count] = useState(1);
   const { productId } = useParams();
   const { addToCart } = UseCart();
 

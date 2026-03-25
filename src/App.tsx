@@ -13,7 +13,7 @@ import Changelog from "./components/common/pages/Changelog/Changelog";
 import Cart from "./components/common/pages/Cart/Cart";
 
 function App() {
-  let routes = [
+  const routes = [
     {
       name: "hero",
       path: "",

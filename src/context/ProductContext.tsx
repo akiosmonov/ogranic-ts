@@ -4,7 +4,6 @@ import React, {
   useState,
   useEffect,
   ReactNode,
-  Children,
 } from "react";
 import axios from "axios";
 
@@ -57,6 +56,9 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+// This file also exports a hook; keep it to reuse across sections.
+// react-refresh fast-refresh has a rule that expects only component exports.
+// eslint-disable-next-line react-refresh/only-export-components
 export const useProducts = () => {
   const context = useContext(ProductContext);
   if (!context)
