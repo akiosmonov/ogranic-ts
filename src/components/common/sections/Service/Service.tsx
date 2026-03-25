@@ -64,7 +64,7 @@ const Service = () => {
         style={{ backgroundImage: `url("/Background Image.svg")` }}
       >
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center text-center max-w-200 mx-auto">
+          <div className="flex flex-col items-center text-center mx-auto">
             <span className="text-brand-green font-yellow text-4xl mb-2">
               Organic Only
             </span>

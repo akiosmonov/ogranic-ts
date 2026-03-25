@@ -10,7 +10,7 @@ const Changelog = () => {
           <PageBanner title="Changelog" bgImage="/Image (13).svg" />
         </div>
 
-        <div className="container mx-auto px-4 py-20 max-w-200">
+        <div className="container mx-auto px-4 py-20">
           <div className="flex items-center gap-5 justify-center shadow-2xl p-10 rounded-3xl border border-gray-100 ">
             <img src="/Image (15).svg" alt="" />
             <div className="flex items-center gap-4">

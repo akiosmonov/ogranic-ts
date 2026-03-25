@@ -83,7 +83,7 @@ const StyleGuide = () => {
             </p>
           </div>
 
-          <div className="flex gap-70 ">
+          <div className="flex ">
             <h1 className="font-bold text-[#274C5B] text-2xl">List</h1>
             <div className="flex flex-col gap-10">
               <ol className="list-decimal list-inside flex flex-col gap-4 text-[#525C60]">

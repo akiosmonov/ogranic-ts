@@ -16,8 +16,8 @@ const Hero = () => {
             alt=""
           />
         </div>
-        <div className="container z-10 mx-auto px-4 h-full flex flex-col justify-center items-start">
-          <div className="max-w-150">
+        <div className="container max-w-[565px] ml-100 z-10 mx-auto px-4 h-full">
+          <div>
             <span className=" text-brand-green font-yellow text-4xl mb-2">
               100% Natural Food
             </span>
@@ -49,7 +49,7 @@ const Hero = () => {
                 <h4 className="text-white text-2xl font-yellow italic mb-2">
                   Natural!!
                 </h4>
-                <h2 className="text-white text-4xl font-black max-w-70 leading-tight">
+                <h2 className="text-white text-4xl font-black leading-tight">
                   Get Garden Fresh Fruits
                 </h2>
               </div>
@@ -65,7 +65,7 @@ const Hero = () => {
                 <h4 className="text-brand-green text-2xl font-yellow italic mb-2">
                   Offer!!
                 </h4>
-                <h2 className="text-brand-dark text-4xl font-black max-w-100 leading-tight">
+                <h2 className="text-brand-dark text-4xl font-black leading-tight">
                   Get 10% off on Vegetables
                 </h2>
               </div>

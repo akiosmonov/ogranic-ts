@@ -14,7 +14,7 @@ const Error = () => {
     >
       <div className="container mx-auto px-4 flex justify-center md:justify-end">
         <div className="max-w-lg flex flex-col items-start gap-4">
-          <img src="/404.svg" alt="404" className="w-full max-w-150" />
+          <img src="/404.svg" alt="404" className="w-full" />
           
           <h1 className="text-[#274C5B] font-black text-6xl md:text-8xl leading-tight">
             Page not found

@@ -41,14 +41,14 @@ const ShopSingle = () => {
       <PageBanner title="Shop Single" bgImage="/Banner Image.svg" />
 
       <div className="container mx-auto mt-40 px-4">
-        <div className="flex gap-30 justify-center items-center">
+        <div className="flex justify-center gap-[100px] items-center">
           <div className="bg-[#333131]">
-            <span className="absolute bg-brand-dark text-white px-3 py-1 rounded-md text-sm font-semibold">
+            <span className="absolute left-[500px] top-[750px] bg-brand-dark text-white px-3 py-1 rounded-md text-sm font-semibold">
               {product.cat}
             </span>
-            <img src={product.img} alt="" />
+            <img src={product.img} className="w-[500px] h-[500px]" alt="" />
           </div>
-          <div className="flex flex-col gap-5 max-w-150">
+          <div className="flex flex-col gap-5">
             <div className="flex gap flex-col">
               <h1 className="text-brand-dark text-3xl font-bold">
                 {product.name}
@@ -73,10 +73,10 @@ const ShopSingle = () => {
               </button>
               <button
                 onClick={() => addToCart(product, count)}
-                className=" bg-brand-dark hover:scale-110 will-change-transform  text-white px-10 py-3.5 rounded-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all"
+                className=" bg-brand-dark hover:scale-110 will-change-transform pt-7.5 pb-7.5 text-white px-10 py-3.5 rounded-2xl font-bold flex items-center gap-2 hover:bg-opacity-90 transition-all"
               >
                 Add To Cart
-                <div className="bg-[#335B6B] hover:scale-105 cursor-pointer rounded-full w-15 h-15 flex items-center justify-center text-[10px]">
+                <div className="bg-[#335B6B] hover:scale-105 cursor-pointer rounded-full flex items-center justify-center text-[10px]">
                   ➔
                 </div>
               </button>

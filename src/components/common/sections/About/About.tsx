@@ -64,8 +64,8 @@ const About = () => {
       <section className="bg-[#F9F8F8]">
         <div className="container mx-auto p-20 flex-col lg:flex-row items-center gap-12">
           <div className=" flex justify-center">
-            <div className=" flex items-center gap-30  ">
-              <div className=" flex flex-col max-w-100">
+            <div className=" flex items-center ">
+              <div className=" flex flex-col">
                 <span className=" text-brand-green font-yellow text-4xl mb-2">
                   Why Choose us?
                 </span>
@@ -80,9 +80,9 @@ const About = () => {
 
                 <div className=" flex flex-col gap-8 mt-10">
                   <div className=" flex flex-col gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center mb-4 gap-4 shrink-0">
+                    <div className="w-6 h-6 rounded-full flex items-center mb-3 gap-4 shrink-0">
                       <img src="/Icon (2).svg" alt="" />
-                      <h3 className="text-brand-dark text-xl font-bold ">
+                      <h3 className="text-brand-dark text-xl leading-tight  font-bold">
                         100% Natural Product
                       </h3>
                     </div>
@@ -95,9 +95,9 @@ const About = () => {
                 </div>
                 <div className=" flex flex-col gap-2">
                   <div className="flex flex-col gap-3">
-                    <div className="w-6 h-6 rounded-full flex items-center mb-4 gap-4 shrink-0">
+                    <div className="w-6 h-6 rounded-full flex items-center mb-3 gap-4 shrink-0">
                       <img src="/Icon (2).svg" alt="" />
-                      <h3 className="text-brand-dark text-xl font-bold">
+                      <h3 className="text-brand-dark text-xl font-bold leading-tight">
                         Increases resistence
                       </h3>
                     </div>
@@ -168,7 +168,7 @@ const About = () => {
                   Our Organic Experts
                 </h4>
               </div>
-              <p className="text-[#525C60] text-center max-w-250 font-semibold text-lg mb-8 leading-relaxed">
+              <p className="text-[#525C60] text-center font-semibold text-lg mb-8 leading-relaxed">
                 Simply dummy text of the printing and typesetting industry.
                 Lorem had ceased to been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley.
@@ -195,7 +195,7 @@ const About = () => {
                 >
                   <img
                     src={item.img}
-                    className="w-full h-100 object-cover"
+                    className="w-full object-cover"
                     alt=""
                   />
                   <div className="p-9 flex justify-between items-center">

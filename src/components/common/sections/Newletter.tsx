@@ -3,7 +3,7 @@ import {Button} from '../ui/Button'
 
 const Newletter = () => {
   return (
-    <section className=" mt-30">
+    <section>
       <div
         className="container rounded-3xl mx-auto"
         style={{
@@ -23,7 +23,7 @@ const Newletter = () => {
             <input
               type="email"
               placeholder="Yout Email Address"
-              className="w-full sm:w-100 px-8 py-6 rounded-2xl bg-white italic outline-none text-brand-dark"
+              className="w-full px-8 py-6 rounded-2xl bg-white italic outline-none text-brand-dark"
             />
             <Button className="w-full sm:w-auto bg-brand-dark text-white px-12 pt-6 pb-6 rounded-2xl font-bold hover:opacity-90 transition-all">
               Subscibe

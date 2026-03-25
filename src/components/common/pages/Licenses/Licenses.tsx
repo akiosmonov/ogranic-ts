@@ -11,7 +11,7 @@ const Licenses = () => {
 
       <div className="container mx-auto py-20 px-4 space-y-24">
         <div className="flex flex-col md:flex-row gap-10 md:gap-20">
-          <h2 className="text-[#274C5B] text-4xl font-extrabold min-w-70">
+          <h2 className="text-[#274C5B] text-4xl font-extrabold">
             Icon & Graphics
           </h2>
           <div className="space-y-6 text-[#525C60] text-lg leading-relaxed">
@@ -27,7 +27,7 @@ const Licenses = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-10 md:gap-20">
-          <h2 className="text-[#274C5B] text-4xl font-extrabold min-w-70">
+          <h2 className="text-[#274C5B] text-4xl font-extrabold">
             Photography
           </h2>
           <div className="space-y-8">
@@ -50,8 +50,8 @@ const Licenses = () => {
             </div>
           </div>
         </div>
-        <div className="flex max-w-270">
-          <h1 className="text-[#274C5B] text-4xl min-w-90 font-bold">Font</h1>
+        <div className="flex">
+          <h1 className="text-[#274C5B] text-4xl font-bold">Font</h1>
           <p>
             Organick template uses free licensed Google Fonts. Please check {" "}
             <span className="font-bold text-black">
