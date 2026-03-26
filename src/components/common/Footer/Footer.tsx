@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  
   return (
     <footer className="bg-white pt-12 md:pt-24 pb-12">
       <div className="container mx-auto px-4">
@@ -41,18 +40,42 @@ const Footer = () => {
               Lorem Ipsum simply dummy text of the printing{" "}
             </p>
             <div className="flex gap-4">
-              <div className="bg-[#EFF6F1] p-4 rounded-full ">
-                <img src="/insta.svg" className=" hover:bg-brand-green cursor-pointer" alt="" />
-              </div>
-              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green cursor-pointer">
-                <img src="/facebook.svg" alt="" />
-              </div>
-              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green cursor-pointer">
-                <img src="/twitter.svg" alt="" />
-              </div>
-              <div className="bg-[#EFF6F1] p-4 rounded-full text-brand-dark hover:bg-brand-green cursor-pointer">
-                <img src="/xd.svg" alt="" />
-              </div>
+              <button
+                type="button"
+                onClick={() => window.open("https://instagram.com", "_blank")}
+                aria-label="Instagram"
+                className="w-14 h-14 rounded-full bg-[#EFF6F1]/80 flex items-center justify-center transition-all duration-300 ease-out hover:bg-brand-green hover:scale-105"
+              >
+                <img src="/insta.svg" className="w-20 h-20" alt="" />
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  window.open("https://www.facebook.com/", "_blank")
+                }
+                aria-label="Facebook"
+                className="w-14 h-14 rounded-full bg-[#EFF6F1]/80 flex items-center justify-center transition-all duration-300 ease-out hover:bg-brand-green hover:scale-105"
+              >
+                <img src="/facebook.svg" className="w-20 h-20" alt="" />
+              </button>
+              <button
+                type="button"
+                onClick={() => window.open("https://x.com/", "_blank")}
+                aria-label="Twitter"
+                className="w-14 h-14 rounded-full bg-[#EFF6F1]/80 flex items-center justify-center transition-all duration-300 ease-out hover:bg-brand-green hover:scale-105"
+              >
+                <img src="/twitter.svg" className="w-20 h-20" alt="" />
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  window.open("https://www.pinterest.com/", "_blank")
+                }
+                aria-label="X"
+                className="w-14 h-14 rounded-full bg-[#EFF6F1]/80 flex items-center justify-center transition-all duration-300 ease-out hover:bg-brand-green hover:scale-105"
+              >
+                <img src="/xd.svg" className="w-20 h-20" alt="" />
+              </button>
             </div>
           </div>
 
