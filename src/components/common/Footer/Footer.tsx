@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   
   return (
-    <footer className="bg-white pt-24 pb-12">
+    <footer className="bg-white pt-12 md:pt-24 pb-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-[#D4D4D4] pb-16">
-          <div className="flex flex-col text-right gap-4">
+          <div className="flex flex-col text-center md:text-right gap-4">
             <h4 className="text-brand-dark text-3xl font-bold font-rob">
               Contact Us
             </h4>
@@ -29,7 +29,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center text-center gap-8 border-x border-[#D4D4D4] px-10">
+          <div className="flex flex-col items-center text-center gap-8 border-b md:border-b-0 md:border-x border-[#D4D4D4] px-10 pb-10 md:pb-0">
             <Link to={"/"} className=" flex items-center gap-3">
               <img src="/Logo.svg" alt="" />
               <span className="text-brand-dark text-3xl font-black font-rob">
@@ -56,11 +56,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="text-left flex flex-col gap-6">
-            <h4 className=" text-brand-dark  text-3xl font-black font-rob">
+          <div className="text-center md:text-left flex flex-col gap-6">
+            <h4 className="text-center md:text-left text-brand-dark  text-3xl font-black font-rob">
               Utility Pages
             </h4>
-            <div className="flex flex-col gap-4 text-[#525C60]">
+            <div className="flex flex-col gap-4 text-[#525C60] items-center md:items-start">
               <Link
                 to={"/StyleGuide"}
                 className="hover:text-brand-green font-light text-lg"
