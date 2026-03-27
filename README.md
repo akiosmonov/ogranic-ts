@@ -1,6 +1,6 @@
 # 🌿 Organick — E-commerce SPA
 
-🔗 Live Demo: 
+🔗 Live Demo: https://ogranic-ts.vercel.app
 
 Современный продуктовый интернет-магазин, построенный на React и TypeScript. Проект реализован в рамках **AI-driven workflow (Vibe Coding)**, что позволило сфокусироваться на сложной логике и UX, делегируя рутинное написание кода нейросетевым инструментам.
 
