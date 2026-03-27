@@ -47,29 +47,29 @@ function App() {
     },
     {
       name: "Licenses",
-      path: 'Licenses',
-      element: <Licenses />
+      path: "Licenses",
+      element: <Licenses />,
     },
     {
       name: "StyleGuide",
       path: "StyleGuide",
-      element: <StyleGuide />
+      element: <StyleGuide />,
     },
     {
-      name: 'PasswordProtect',
-      path: 'PasswordProtect',
-      element: <PasswordProtect />
+      name: "PasswordProtect",
+      path: "PasswordProtect",
+      element: <PasswordProtect />,
     },
     {
       name: "Changelog",
-      path: 'Changelog',
-      element: <Changelog />
+      path: "Changelog",
+      element: <Changelog />,
     },
     {
       name: "Cart",
       path: "Cart",
-      element: <Cart />
-    }
+      element: <Cart />,
+    },
   ];
   return (
     <BrowserRouter>
@@ -79,6 +79,7 @@ function App() {
             <Route key={item.name} path={item.path} element={item.element} />
           ))}
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

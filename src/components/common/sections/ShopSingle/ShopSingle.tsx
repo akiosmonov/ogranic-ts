@@ -15,8 +15,6 @@ const ShopSingle = () => {
     (item) => String(item.id) === String(productId),
   );
 
-  console.log(product);
-
   if (loading)
     return (
       <center>
