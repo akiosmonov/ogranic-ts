@@ -16,13 +16,13 @@ const Hero = () => {
             alt=""
           />
         </div>
-        <div className="container max-w-[565px] ml-100 z-10 mx-auto px-4 h-full">
+        <div className="container max-w-[565px] ml-0 lg:ml-100 z-10 mx-auto px-4">
           <div>
-            <span className=" text-brand-green font-yellow text-4xl mb-2">
+            <span className=" text-brand-green font-yellow text-3xl sm:text-4xl mb-2">
               100% Natural Food
             </span>
 
-            <h1 className=" text-brand-dark  text-6xl font-black font-rob leading-tight mb-10">
+            <h1 className=" text-brand-dark  text-4xl sm:text-5xl md:text-6xl font-black font-rob leading-tight mb-10">
               Choose the best healthier way of life
             </h1>
 
@@ -74,16 +74,16 @@ const Hero = () => {
         </div>
       </section>
       <section>
-        <div className="container mx-auto px-4 flex-col lg:flex-row items-center gap-12">
+        <div className="container mx-auto px-4 flex-col lg:flex-row items-center gap-12 mb-20 md:mb-30">
           <div className=" lg:flex-row flex items-center gap-16">
             <div className=" lg:w-1/2">
               <img src="/Photo (5).svg" alt="" />
             </div>
             <div className=" lg:w-1/2 flex flex-col items-start">
-              <span className="text-brand-green font-yellow text-4xl mb-2">
+              <span className="text-brand-green font-yellow text-3xl sm:text-4xl mb-2">
                 About Us
               </span>
-              <h2 className=" text-brand-dark text-5xl font-black font-rob mb-6 leading-tight">
+              <h2 className=" text-brand-dark text-3xl sm:text-4xl lg:text-5xl font-black font-rob mb-6 leading-tight">
                 We Believe in Working Accredited Farmers
               </h2>
               <p className="text-[#525C60] font-semibold text-lg mb-8 leading-relaxed">
