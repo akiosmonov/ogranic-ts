@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PageBanner from "../PageBanner";
 import { useProducts } from "@/context/ProductContext";
 import { UseCart } from "@/context/CartContext";
@@ -26,13 +26,31 @@ const ShopSingle = () => {
 
   if (!product)
     return (
-      <center>
-        <div className="flex items-center justify-center">
-          <h1 className="text-brand-dark text-4xl font-black">
-            Product not found
-          </h1>
+      <section className="bg-white pb-20">
+        <PageBanner title="Shop Single" bgImage="/Banner Image.svg" />
+
+        <div className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-2xl mx-auto bg-[#F9F8F8] rounded-3xl p-8 md:p-12 text-center shadow-sm">
+            <div className="mx-auto mb-6 h-14 w-14 rounded-2xl bg-white flex items-center justify-center shadow-sm">
+              <span className="text-2xl text-brand-dark font-black">!</span>
+            </div>
+
+            <h1 className="text-brand-dark text-3xl md:text-5xl font-black leading-tight mb-4">
+              Product not found
+            </h1>
+            <p className="text-[#525C60] text-base md:text-lg leading-relaxed mb-8">
+              The product you’re looking for doesn’t exist or may have been removed.
+              Try going back to the shop and selecting a different item.
+            </p>
+
+            <Link to="/shop" className="inline-flex">
+              <Button className="bg-brand-dark text-white px-8 py-5 rounded-xl font-bold shadow-lg shadow-brand-dark/20 active:scale-95">
+                Go Back to Shop
+              </Button>
+            </Link>
+          </div>
         </div>
-      </center>
+      </section>
     );
 
   return (
