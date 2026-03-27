@@ -18,7 +18,7 @@ const Shop = () => {
 
   return (
     <>
-      <section className="bg-white">
+      <section className="bg-[#F9F8F8]">
         <PageBanner title="Shop" bgImage="/images.svg" />
 
         <div className="container mx-auto mt-40 mb-20 pb-20 pt-20  px-4">
