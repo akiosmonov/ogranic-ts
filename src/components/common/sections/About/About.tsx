@@ -11,12 +11,12 @@ const About = () => {
       <section id="about" className=" bg-white">
         <PageBanner title="About Us" bgImage="/Image (1).svg" />
 
-        <div className="container mx-auto px-4 flex-col lg:flex-row items-center gap-12">
-          <div className=" lg:flex-row flex items-center gap-16">
-            <div className=" lg:w-1/2">
+        <div className="container mx-auto px-4 py-12 md:py-20 mb-6 md:mb-0 flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
+            <div className="w-full lg:w-1/2">
               <img src="/Image (2).svg" alt="" />
             </div>
-            <div className=" lg:w-1/2 flex flex-col items-start">
+            <div className="w-full lg:w-1/2 flex flex-col items-start">
               <span className="text-brand-green font-yellow text-4xl mb-2">
                 About Us
               </span>
@@ -29,23 +29,23 @@ const About = () => {
                 since the 1500s.
               </p>
 
-              <div className=" mb-10 flex items-center gap-4">
-                <div className=" flex items-center gap-5">
-                  <div className=" bg-white p-4 rounded-xl shadow-sm">
-                    <img src="/Icon.svg" className=" w-10 h-10" alt="" />
+              <div className="mb-10 w-full flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-6">
+                <div className="flex items-start sm:items-center gap-4 sm:gap-5 w-full sm:w-auto sm:flex-1 min-w-[220px]">
+                  <div className="bg-white p-4 rounded-xl shadow-sm shrink-0">
+                    <img src="/Icon.svg" className="w-10 h-10" alt="" />
                   </div>
-                  <div className=" flex flex-col">
-                    <h4 className=" text-brand-dark font-black text-xl">
+                  <div className="flex flex-col">
+                    <h4 className="text-brand-dark font-black text-lg sm:text-xl leading-snug">
                       Modern Agriculture Equipment
                     </h4>
                   </div>
                 </div>
 
-                <div className=" flex items-center gap-4">
-                  <div className=" bg-white p-4 rounded-xl shadow-sm">
-                    <img src="/Icon (1).svg" className=" w-10 h-10" alt="" />
+                <div className="flex items-start sm:items-center gap-4 w-full sm:w-auto sm:flex-1 min-w-[220px]">
+                  <div className="bg-white p-4 rounded-xl shadow-sm shrink-0">
+                    <img src="/Icon (1).svg" className="w-10 h-10" alt="" />
                   </div>
-                  <h4 className=" text-brand-dark font-black text-xl">
+                  <h4 className="text-brand-dark font-black text-lg sm:text-xl leading-snug">
                     No growth hormones are used
                   </h4>
                 </div>
@@ -62,10 +62,10 @@ const About = () => {
         </div>
       </section>
       <section className="bg-[#F9F8F8]">
-        <div className="container mx-auto p-20 flex-col lg:flex-row items-center gap-12">
-          <div className=" flex justify-center">
-            <div className=" flex items-center ">
-              <div className=" flex flex-col">
+        <div className="container mx-auto px-4 py-12 md:py-20 flex flex-col gap-12">
+          <div className="flex justify-center">
+            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 w-full">
+              <div className="flex flex-col w-full lg:w-1/2">
                 <span className=" text-brand-green font-yellow text-4xl mb-2">
                   Why Choose us?
                 </span>
@@ -110,7 +110,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="">
+              <div className="w-full lg:w-1/2 flex justify-center">
                 <img src="/Image (3).svg" alt="" />
               </div>
             </div>
@@ -157,7 +157,7 @@ const About = () => {
         </div>
       </section>
       <section className="bg-white">
-        <div className="container mx-auto pt-30 px-4">
+        <div className="container mx-auto px-4 py-12 md:py-20">
           <div className=" flex flex-col items-center text-center mb-12">
             <div className=" flex flex-col text-center ">
               <div className=" flex flex-col text-center">
@@ -214,8 +214,8 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#274C5B]">
-        <div className="container mx-auto pt-30 px-4">
+      <section className="bg-[#274C5B] mb-20">
+        <div className="container mx-auto px-4 py-12 md:py-20">
           <div className=" flex flex-col items-center text-center mb-12">
             <div className=" flex flex-col text-center ">
               <div className=" flex flex-col text-center">
@@ -228,7 +228,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 pb-30">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 pb-12 md:pb-20">
               {[
                 {
                   name: "Spicy",

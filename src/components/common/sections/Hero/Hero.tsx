@@ -16,7 +16,7 @@ const Hero = () => {
             alt=""
           />
         </div>
-        <div className="container max-w-[565px] ml-0 lg:ml-100 z-10 mx-auto px-4">
+        <div className="container max-w-[565px] ml-0 lg:ml-[100px] z-10 mx-auto px-4">
           <div>
             <span className=" text-brand-green font-yellow text-3xl sm:text-4xl mb-2">
               100% Natural Food
@@ -45,7 +45,7 @@ const Hero = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Fruits"
               />
-              <div className="absolute inset-0 flex flex-col justify-center pl-12 pointer-events-none">
+              <div className="absolute inset-0 flex flex-col justify-center pl-6 sm:pl-12 pointer-events-none">
                 <h4 className="text-white text-2xl font-yellow italic mb-2">
                   Natural!!
                 </h4>
@@ -61,7 +61,7 @@ const Hero = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Vegetables"
               />
-              <div className="absolute inset-0 flex flex-col justify-center pl-12 pointer-events-none">
+              <div className="absolute inset-0 flex flex-col justify-center pl-6 sm:pl-12 pointer-events-none">
                 <h4 className="text-brand-green text-2xl font-yellow italic mb-2">
                   Offer!!
                 </h4>
@@ -74,12 +74,12 @@ const Hero = () => {
         </div>
       </section>
       <section>
-        <div className="container mx-auto px-4 flex-col lg:flex-row items-center gap-12 mb-20 md:mb-30">
-          <div className=" lg:flex-row flex items-center gap-16">
-            <div className=" lg:w-1/2">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 mb-16 md:mb-24">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full">
+            <div className="w-full lg:w-1/2">
               <img src="/Photo (5).svg" alt="" />
             </div>
-            <div className=" lg:w-1/2 flex flex-col items-start">
+            <div className="w-full lg:w-1/2 flex flex-col items-start">
               <span className="text-brand-green font-yellow text-3xl sm:text-4xl mb-2">
                 About Us
               </span>
@@ -92,31 +92,39 @@ const Hero = () => {
                 since the 1500s.
               </p>
 
-                <div className=" mb-10 flex flex-col items-center gap-4">
-                  <div className=" flex items-center gap-5">
-                    <div className=" bg-white p-4 rounded-xl shadow-sm">
-                      <img src="/Icon (10).svg" className=" w-14 h-14" alt="" />
+                <div className="mb-10 flex flex-col gap-4 w-full">
+                  <div className="flex items-start sm:items-center gap-4 sm:gap-5">
+                    <div className="bg-white p-3 sm:p-4 rounded-xl shadow-sm shrink-0">
+                      <img
+                        src="/Icon (10).svg"
+                        className="w-12 h-12 sm:w-14 sm:h-14"
+                        alt=""
+                      />
                     </div>
                     <div className=" flex flex-col gap-1">
-                      <h4 className=" text-brand-dark font-black text-xl">
+                      <h4 className="text-brand-dark font-black text-lg sm:text-xl leading-snug">
                         Modern Agriculture Equipment
                       </h4>
-                      <p>
+                      <p className="text-[#525C60] text-sm sm:text-base leading-relaxed">
                         Simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum
                       </p>
                     </div>
                   </div>
 
-                  <div className=" flex items-center gap-4">
-                    <div className=" bg-white p-4 rounded-xl shadow-sm">
-                      <img src="/Icon (11).svg" className=" w-14 h-14" alt="" />
+                  <div className="flex items-start sm:items-center gap-4">
+                    <div className="bg-white p-3 sm:p-4 rounded-xl shadow-sm shrink-0">
+                      <img
+                        src="/Icon (11).svg"
+                        className="w-12 h-12 sm:w-14 sm:h-14"
+                        alt=""
+                      />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <h4 className=" text-brand-dark font-black text-xl">
+                      <h4 className="text-brand-dark font-black text-lg sm:text-xl leading-snug">
                         Quality Standards
                       </h4>
-                      <p>
+                      <p className="text-[#525C60] text-sm sm:text-base leading-relaxed">
                         Simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum
                       </p>
