@@ -1,32 +1,37 @@
-# 🌿 Organick — E-commerce SPA
+# Organick — E-commerce SPA
 
-🔗 Live Demo: https://ogranic-ts.vercel.app
+**Live demo:** [https://ogranic-ts.vercel.app](https://ogranic-ts.vercel.app)
 
-Современный продуктовый интернет-магазин, построенный на React и TypeScript. Проект реализован в рамках **AI-driven workflow (Vibe Coding)**, что позволило сфокусироваться на сложной логике и UX, делегируя рутинное написание кода нейросетевым инструментам.
+## Core stack
 
-### 🚀 Технологический стек:
-* **Frontend:** React 18 + Vite
-* **Language:** TypeScript (полная типизация данных)
-* **State Management:** **Zustand** (легкое и быстрое управление состоянием корзины и товаров)
-* **Styling:** Tailwind CSS + SCSS Modules (для сложных визуальных эффектов)
-* **API:** Axios + REST API (интеграция с базой товаров)
+- React 19
+- TypeScript
+- Vite
+- Zustand
+- Tailwind CSS
 
-* Изпользован сайт MockApi
+## Infrastructure
 
+Production image: multi-stage **Docker** build (Node → static `dist`) served by **nginx**. `try_files` routes all non-file requests to `index.html`, so **client-side (React Router) URLs work on refresh and deep links**—required for SPA hosting.
 
-### ⚙️ Ключевой функционал:
-1.  **Масштабируемая корзина:** управление товарами через Zustand с синхронизацией в `LocalStorage`.
-2.  **Динамическая фильтрация:** быстрый поиск и сортировка продуктов без лишних ререндеров.
-3.  **Адаптивная верстка:** интерфейс полностью оптимизирован под мобильные устройства. (Пока в разработке)
-4.  **Чистая архитектура:** разделение логики (хуки/сторы) и представления (компоненты).
-5. ⚡ Оптимизированная производительность
+## Key features
 
+- **Cart:** React Context with `localStorage` sync for persistence across sessions.
+- **Catalog:** REST data via Axios (MockAPI).
+- **Routing:** `react-router-dom` with layout-level **Framer Motion** (`AnimatePresence` / `motion`) for route transitions.
+- **Styling:** Tailwind CSS plus SCSS where module-scoped styles are needed.
 
-🛠 Установка и запуск
+## Getting started
 
-   npm install
-   npm run dev
+**npm**
 
----
-*Developed with focus on speed and quality. Feel the vibe!* ⚡
-"Написанно с AI для обучения TypeScript и Tailwild (Zustand)"
+```bash
+npm install
+npm run dev
+```
+
+**Docker Compose** (builds and serves on [http://localhost:8080](http://localhost:8080))
+
+```bash
+docker compose up --build
+```
