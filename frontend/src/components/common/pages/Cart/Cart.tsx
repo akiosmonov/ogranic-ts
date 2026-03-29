@@ -8,7 +8,7 @@ const Cart = () => {
   const { cartItems, removeFromCart } = UseCart();
 
   const total = cartItems.reduce(
-    (acc, item) => acc + Number(item.price) * Number(item.qty),
+    (acc, item) => acc + item.price * item.qty,
     0,
   );
 

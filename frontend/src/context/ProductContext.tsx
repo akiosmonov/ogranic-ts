@@ -11,8 +11,8 @@ export interface Product {
   id: number;
   cat: string;
   name: string;
-  price: string;
-  oldPrice: string;
+  price: number;
+  oldPrice: number;
   img: string;
   desc: string;
   calories: number;
@@ -28,6 +28,29 @@ interface ProductContextType {
 
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
 
+type ApiProduct = Omit<Product, "id" | "price" | "oldPrice" | "calories" | "proteins" | "fats" | "carbs"> & {
+  id: number | string;
+  price: number | string;
+  oldPrice: number | string;
+  calories: number | string;
+  proteins: number | string;
+  fats: number | string;
+  carbs: number | string;
+};
+
+const toNumber = (value: number | string) => Number(value);
+
+const normalizeProduct = (item: ApiProduct): Product => ({
+  ...item,
+  id: toNumber(item.id),
+  price: toNumber(item.price),
+  oldPrice: toNumber(item.oldPrice),
+  calories: toNumber(item.calories),
+  proteins: toNumber(item.proteins),
+  fats: toNumber(item.fats),
+  carbs: toNumber(item.carbs),
+});
+
 const PRODUCTS_URL = (() => {
   const custom = import.meta.env.VITE_API_URL;
   if (custom) return `${custom.replace(/\/$/, "")}/api/products`;
@@ -42,8 +65,8 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get<Product[]>(PRODUCTS_URL);
-        setProducts(res.data);
+        const res = await axios.get<ApiProduct[]>(PRODUCTS_URL);
+        setProducts(res.data.map(normalizeProduct));
       } catch (err) {
         console.log("ОШИБКА:", err);
       } finally {
