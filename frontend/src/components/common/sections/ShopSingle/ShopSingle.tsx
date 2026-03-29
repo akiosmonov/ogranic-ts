@@ -98,6 +98,28 @@ const ShopSingle = () => {
               {product.desc}
             </p>
 
+            <div className="grid grid-cols-1 items-center mb-10 sm:grid-cols-4 gap-4 py-6 border-t border-b border-gray-100 ">
+              <div className=" flex flex-col ">
+                <span className="text-sm text-gray-400 font-medium ">Colories</span>
+                <span className="text-xl font-bold text-primary ">
+                  {product.calories} kcal
+                </span>
+              </div>
+              <div className=" flex flex-col ">
+                <span className="text-sm text-gray-400 font-medium ">Proteins</span>
+                <span className="text-xl font-bold text-primary ">
+                  {product.proteins} kcal
+                </span>
+              </div>
+              <div className=" flex flex-col ">
+                <span className="text-sm text-gray-400 font-medium ">Fats</span>
+                <span className="text-xl font-bold text-primary ">
+                  {product.fats} kcal
+                </span>
+              </div>
+
+            </div>
+
             <div className="flex flex-col sm:flex-row sm:items-center items-center gap-6 ">
               <span className="text-brand-dark text-lg font-bold">
                 Quantity :
