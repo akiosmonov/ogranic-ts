@@ -15,6 +15,7 @@ app.get("/health", (_req, res) => {
   res.json({ ok: true });
 });
 
+
 app.get("/api/products", async (_req, res) => {
   try {
     const { data } = await axios.get<unknown>(MOCK_API);
