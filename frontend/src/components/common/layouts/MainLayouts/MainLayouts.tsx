@@ -2,7 +2,7 @@ import Footer from "@/components/common/Footer/Footer";
 import Header from "@/components/common/Header/Header";
 import { Outlet, useLocation } from "react-router-dom";
 import ScrollToTop from "../../../ScrollToTop";
-import { easeOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 
 export const MainLayout = () => {

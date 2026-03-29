@@ -28,16 +28,21 @@ interface ProductContextType {
 
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
 
+const PRODUCTS_URL = (() => {
+  const custom = import.meta.env.VITE_API_URL;
+  if (custom) return `${custom.replace(/\/$/, "")}/api/products`;
+  if (import.meta.env.DEV) return "/api/products";
+  return "https://69bba5a60915748735b9c879.mockapi.io/shop/shop";
+})();
+
 export const ProductProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const url = "https://69bba5a60915748735b9c879.mockapi.io/shop/shop";
-
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get<Product[]>(url);
+        const res = await axios.get<Product[]>(PRODUCTS_URL);
         setProducts(res.data);
       } catch (err) {
         console.log("ОШИБКА:", err);
@@ -55,6 +60,7 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components -- hook paired with ProductProvider
 export const useProducts = () => {
   const context = useContext(ProductContext);
   if (!context)
