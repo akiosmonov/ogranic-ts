@@ -9,6 +9,7 @@
 - Vite
 - Zustand
 - Tailwind CSS
+- backend - Node.js + TypeScript (собственный API сервис)
 
 ## Infrastructure
 
