@@ -3,9 +3,12 @@ import Newletter from "../Newletter";
 import { Link } from "react-router-dom";
 import PageBanner from "../PageBanner";
 import { useProducts } from "@/context/ProductContext";
+import { UseCart } from "@/context/CartContext";
+import { motion } from "framer-motion";
 
 const Shop = () => {
   const { products, loading } = useProducts();
+  const { addToCart } = UseCart();
 
   if (loading)
     return (
@@ -54,7 +57,22 @@ const Shop = () => {
                       {item.price}$
                     </span>
                   </div>
-                  <div className="flex text-[#FFA858] text-xs">{"★★★★★"}</div>
+
+                  <div className="flex flex-col items-end gap-2">
+                    <div className="flex text-[#FFA858] text-xs">{"★★★★★"}</div>
+
+                    <motion.button
+                      whileTap={{ scale: 0.85 }}
+                      whileHover={{ scale: 1.1 }}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        addToCart(item, 1);
+                      }}
+                      className="bg-brand-dark text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-[#335b6d] transition-colors"
+                    >
+                      <span className="text-xl font-bold">+</span>
+                    </motion.button>
+                  </div>
                 </div>
               </div>
             ))}
